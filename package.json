@@ -1,0 +1,39 @@
+{
+  "name": "skeleton-loading-animation-with-vue",
+  "version": "0.1.0",
+  "author": "Markus Oberlehner",
+  "homepage": "https://github.com/maoberlehner/skeleton-loading-animation-with-vue",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@avalanche/generic-box-sizing-reset": "^4.0.0-alpha.5",
+    "@avalanche/object-container": "^4.0.0-alpha.8",
+    "@avalanche/object-media": "^4.0.0-alpha.6",
+    "@avalanche/object-vertical-spacing": "^4.0.0-alpha.5",
+    "@avalanche/setting-spacings": "^4.0.0-alpha.6",
+    "@vue/cli-plugin-babel": "^3.1.1",
+    "@vue/cli-service": "^3.1.2",
+    "node-sass": "^4.9.4",
+    "node-sass-magic-importer": "^5.2.0",
+    "reset-css": "^4.0.1",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.5.17",
+    "vue-template-compiler": "^2.5.17"
+  },
+  "devDependencies": {
+    "@avalanche/eslint-config": "^3.0.0",
+    "@vue/cli-plugin-eslint": "^3.1.4",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-vue": "^4.7.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

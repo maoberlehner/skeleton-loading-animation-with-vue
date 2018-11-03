@@ -1,0 +1,10 @@
+{
+  "root": true,
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "extends": [
+    "@avalanche/eslint-config",
+    "plugin:vue/recommended"
+  ]
+}
