@@ -4,7 +4,7 @@
 
     <section class="App__example o-vertical-spacing o-vertical-spacing--l">
       <data-frame>
-        <div slot-scope="{ data: blogPosts, error }">
+        <div slot-scope="{ data: blogPosts, error, loading }">
           <p
             v-if="error"
             class="error"
@@ -15,25 +15,35 @@
             v-else
             class="o-vertical-spacing"
           >
-            <li
-              v-for="blogPost in blogPosts"
-              :key="blogPost.id"
-            >
-              <blog-post>
-                <img
-                  slot="figure"
-                  :src="blogPost.image"
-                  alt=""
-                >
-                <template slot="headline">
-                  {{ blogPost.title }}
-                </template>
-                {{ blogPost.snippet }}
-                <span slot="meta">
-                  {{ blogPost.date }}
-                </span>
-              </blog-post>
-            </li>
+            <template v-if="loading">
+              <li
+                v-for="n in 3"
+                :key="n"
+              >
+                <blog-post loading/>
+              </li>
+            </template>
+            <template v-else>
+              <li
+                v-for="blogPost in blogPosts"
+                :key="blogPost.id"
+              >
+                <blog-post>
+                  <img
+                    slot="figure"
+                    :src="blogPost.image"
+                    alt=""
+                  >
+                  <template slot="headline">
+                    {{ blogPost.title }}
+                  </template>
+                  {{ blogPost.snippet }}
+                  <span slot="meta">
+                    {{ blogPost.date }}
+                  </span>
+                </blog-post>
+              </li>
+            </template>
           </ul>
         </div>
       </data-frame>
